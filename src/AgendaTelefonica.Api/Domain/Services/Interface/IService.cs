@@ -9,7 +9,7 @@ namespace AgendaTelefonica.Api.Damain.Services.Interface
     /// interface generica para criançao de serviços do tipo CRUD.
     /// </summary>
     /// <typeparam name="RQ">Contrato de request</typeparam>
-    /// <typeparam name="RS">Contrato de responde</typeparam>
+    /// <typeparam name="RS">Contrato de response</typeparam>
     /// <typeparam name="I">Tipo do ID</typeparam>
     public interface IService<RQ, RS, I> where RQ : class
     {

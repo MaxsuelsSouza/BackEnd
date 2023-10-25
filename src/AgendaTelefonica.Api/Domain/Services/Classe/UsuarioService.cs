@@ -42,11 +42,11 @@ namespace AgendaTelefonica.Api.Damain.Services.Classe
 
             usuario.Senha = GeraHashSenha(usuario.Senha);
 
-            Usuario usuarioMod = new Usuario(
+            Usuario validacaoDeCampo = new Usuario(
                 entidade.Email
             );
 
-            ValidacaoUser.Validation(usuarioMod);
+            ValidacaoUser.Validation(validacaoDeCampo);
 
             usuario = await _usuarioRepository.Adicionar(usuario);
 
