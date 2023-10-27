@@ -33,6 +33,8 @@ namespace AgendaTelefonica.Test.controller
             //Arrange
 
 
+
+
             //Act
 
 
@@ -53,5 +55,12 @@ namespace AgendaTelefonica.Test.controller
 
         }
 
+    }
+
+    internal class ContatoLoginRequestContrato
+    {
+        public ContatoLoginRequestContrato()
+        {
+        }
     }
 }
