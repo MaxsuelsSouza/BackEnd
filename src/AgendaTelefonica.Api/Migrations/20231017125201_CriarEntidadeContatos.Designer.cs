@@ -35,9 +35,6 @@ namespace AgendaTelefonica.Api.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("VARCHAR");
 
-                    b.Property<string>("Endereco")
-                        .HasColumnType("VARCHAR");
-
                     b.Property<long>("IdUsuario")
                         .HasColumnType("bigint");
 
@@ -50,12 +47,6 @@ namespace AgendaTelefonica.Api.Migrations
 
                     b.Property<string>("Numero")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
-
-                    b.Property<string>("RedeSocial")
-                        .HasColumnType("VARCHAR");
-
-                    b.Property<string>("SobreNome")
                         .HasColumnType("VARCHAR");
 
                     b.HasKey("Id");

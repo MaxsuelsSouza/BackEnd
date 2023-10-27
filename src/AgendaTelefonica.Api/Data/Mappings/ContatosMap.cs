@@ -19,26 +19,11 @@ namespace AgendaTelefonica.Api.Data.Mappings
             .HasColumnType("VARCHAR")
             .IsRequired();
 
-            builder.Property(p => p.SobreNome)
-            .HasColumnType("VARCHAR");
-
-
             builder.Property(p => p.Numero)
             .HasColumnType("VARCHAR")
             .IsRequired();
 
             builder.Property(p => p.Email)
-            .HasColumnType("VARCHAR");
-
-
-            builder.Property(p => p.Endereco)
-            .HasColumnType("VARCHAR");
-
-
-            builder.Property(p => p.RedeSocial)
-            .HasColumnType("VARCHAR");
-
-            builder.Property(p => p.Cpf)
             .HasColumnType("VARCHAR");
 
             builder.Property(p => p.Nota)

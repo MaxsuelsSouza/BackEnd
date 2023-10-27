@@ -32,9 +32,6 @@ namespace AgendaTelefonica.Api.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("VARCHAR");
 
-                    b.Property<string>("Endereco")
-                        .HasColumnType("VARCHAR");
-
                     b.Property<long>("IdUsuario")
                         .HasColumnType("bigint");
 
@@ -45,17 +42,8 @@ namespace AgendaTelefonica.Api.Migrations
                     b.Property<string>("Nota")
                         .HasColumnType("VARCHAR");
 
-                    b.Property<string>("Cpf")
-                        .HasColumnType("VARCHAR");
-
                     b.Property<string>("Numero")
                         .IsRequired()
-                        .HasColumnType("VARCHAR");
-
-                    b.Property<string>("RedeSocial")
-                        .HasColumnType("VARCHAR");
-
-                    b.Property<string>("SobreNome")
                         .HasColumnType("VARCHAR");
 
                     b.HasKey("Id");
@@ -73,11 +61,11 @@ namespace AgendaTelefonica.Api.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("Senha")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("VARCHAR");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("VARCHAR");
 

@@ -19,12 +19,8 @@ namespace AgendaTelefonica.Api.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     IdUsuario = table.Column<long>(type: "bigint", nullable: false),
                     Nome = table.Column<string>(type: "VARCHAR", nullable: false),
-                    SobreNome = table.Column<string>(type: "VARCHAR", nullable: true),
                     Numero = table.Column<string>(type: "VARCHAR", nullable: false),
                     Email = table.Column<string>(type: "VARCHAR", nullable: true),
-                    Cpf = table.Column<string>(type: "VARCHAR", nullable: true),
-                    Endereco = table.Column<string>(type: "VARCHAR", nullable: true),
-                    RedeSocial = table.Column<string>(type: "VARCHAR", nullable: true),
                     Nota = table.Column<string>(type: "VARCHAR", nullable: true)
                 },
                 constraints: table =>

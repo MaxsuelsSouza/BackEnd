@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AgendaTelefonica.Api.Controllers
 {
     [ApiController]
-    [Route("meus contatos")]
+    [Route("contatos")]
     public class ContatosController : BaseController
     {
         private readonly IService<ContatosRequestContratos, ContatosResponseContratos, long> _contatosService;

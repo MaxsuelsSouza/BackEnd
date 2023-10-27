@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AgendaTelefonica.Api.Controllers
 {
     [ApiController]
-    [Route("contatos")]
+    [Route("usuarios")]
     public class UsuarioController : BaseController
     {
         private readonly IUsuarioService _usuarioService;
@@ -64,7 +64,7 @@ namespace AgendaTelefonica.Api.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [AllowAnonymous]
         public async Task<IActionResult> Obter()
         {
             try

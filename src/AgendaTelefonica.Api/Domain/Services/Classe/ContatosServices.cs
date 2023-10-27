@@ -43,21 +43,16 @@ namespace AgendaTelefonica.Api.Damain.Services.Classe
             Contatos contatos = await ObterPorIdVinculadoAoIdUsuario(id, idUsuario);
 
             var atualizar = new Contatos(
-                entidade.Nome, entidade.SobreNome,
-                entidade.Numero, entidade.Cpf, entidade.Email,
-                entidade.Endereco, entidade.RedeSocial,
-                entidade.Nota
 
+                entidade.Numero,
+                entidade.Email,
+                entidade.Nota,
+                entidade.Nome
             );
-
-            contatos.Nome = atualizar.Nome;
-            contatos.SobreNome = atualizar.SobreNome;
             contatos.Numero = atualizar.Numero;
             contatos.Email = atualizar.Email;
-            contatos.Cpf = atualizar.Cpf;
-            contatos.Endereco = atualizar.Endereco;
-            contatos.RedeSocial = atualizar.RedeSocial;
             contatos.Nota = atualizar.Nota;
+            contatos.Nome = atualizar.Nome;
 
             contatos = await _contatosRepository.Atualizar(contatos);
 
