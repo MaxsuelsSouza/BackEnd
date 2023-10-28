@@ -23,7 +23,9 @@ namespace AgendaTelefonica.Api.Damain.Models
         public string? Nota { get; set; }
 
 
-
+        /// <summary>
+        /// irar ser usado na service para que o usuario atualize os dados de um contato
+        /// </summary>
         public Contatos(
              string numero, string? email
              , string? nota, string nome)

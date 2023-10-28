@@ -1,15 +1,14 @@
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 using AgendaTelefonica.Api.Damain.Models;
 using Microsoft.IdentityModel.Tokens;
 
 namespace AgendaTelefonica.Api.Damain.Services.Classe
 {
+    /// <summary>
+    /// configura to ambiente de atenticaçao
+    /// </summary>
     public class TokenService
     {
         private readonly IConfiguration _configuration;

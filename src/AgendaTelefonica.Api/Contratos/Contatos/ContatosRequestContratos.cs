@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace AgendaTelefonica.Api.Contratos.Contatos
 {
+    /// <summary>
+    /// O que ele espera que o usuario envie para poder adicionar um contato novo
+    /// </summary>
     public class ContatosRequestContratos
     {
         public string Nome { get; set; } = string.Empty;

@@ -1,5 +1,3 @@
-
-
 namespace AgendaTelefonica.Api.Exception
 {
     public class NotFoundException : System.Exception

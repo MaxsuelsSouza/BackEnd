@@ -17,7 +17,11 @@ namespace AgendaTelefonica.Api.Controllers
         {
             _usuarioService = usuarioService;
         }
-
+        /// <summary>
+        /// fara a validaçao do campo email e senha, caso verdadeiro devolverar um token 
+        /// </summary>
+        /// <param name="contrato">o que ele espera receber para logar</param>
+        /// <returns>devolverar o email e token caso usuario exista no banco de dados</returns>
         [HttpPost]
         [Route("login")]
         [AllowAnonymous]
@@ -39,6 +43,11 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// criarar um usuario novo
+        /// </summary>
+        /// <param name="contrato">o que ele espera receber para poder cadastrar um novo usuario</param>
+        /// <returns></returns>
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Adicionar(
@@ -62,9 +71,12 @@ namespace AgendaTelefonica.Api.Controllers
                 return Problem(ex.Message);
             }
         }
-
+        /// <summary>
+        /// irar obter todos os usuarios cadastrados
+        /// </summary>
+        /// <returns>devolverar uma lista de usuarios cadastrados</returns>
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize]
         public async Task<IActionResult> Obter()
         {
             try
@@ -77,6 +89,11 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// irar obter um usuario pelo seu id cadastrado
+        /// </summary>
+        /// <param name="id">indentificador do usuario</param>
+        /// <returns>retornara o usuario pelo id fornecido</returns>
         [HttpGet]
         [Route("{id}")]
         [Authorize]
@@ -96,6 +113,12 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// atualizarar um usuario pelo id fornecido
+        /// </summary>
+        /// <param name="id">chave identificadora do usuario</param>
+        /// <param name="contrato">o que ele espera receber para atualizar o usuario</param>
+        /// <returns></returns>
         [HttpPut]
         [Route("{id}")]
         [Authorize]
@@ -121,6 +144,11 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// irar deletar o usuario pelo id fornecido 
+        /// </summary>
+        /// <param name="id">o que irar dizer qual usuario deverar ser deletado</param>
+        /// <returns>retorna que foi bem sucedido mas nao tem nada para amostrar</returns>
         [HttpDelete]
         [Route("{id}")]
         [Authorize]

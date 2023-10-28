@@ -4,6 +4,11 @@ using AutoMapper;
 
 namespace AgendaTelefonica.Api.AutoMapper
 {
+    /// <summary>
+    /// consegue converte um Usuario em usuarioRequest e usuarioRequest em Usuario
+    /// </summary> <summary>
+    /// consegue converte um Usuario em usuarioResponse e usuarioResponse em Usuario
+    /// </summary>
     public class UsuarioProfile : Profile
     {
         public UsuarioProfile()

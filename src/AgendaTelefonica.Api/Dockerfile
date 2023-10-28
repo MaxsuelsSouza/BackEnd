@@ -1,10 +1,6 @@
 # ESTAGIO 1
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 WORKDIR /App
-EXPOSE 80
-
-ENV ASPNETCORE_URLS=htp://+8000;htp://+:80;
-ENV ASPNETCORE_ENVIRONMENT=Development
 
 # Copy everything
 COPY . ./
@@ -17,4 +13,5 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /App
 COPY --from=build-env /App/out .
-ENTRYPOINT ["dotnet", "AgendaTelefonica.Api.dll"]
+ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
+# ENTRYPOINT ["dotnet", "AgendaTelefonica.Api.dll"]

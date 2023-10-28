@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgendaTelefonica.Api.Contratos.Contatos
 {
+    /// <summary>
+    /// vai ser usada para tratamento de erro na controller usuario e contatos
+    /// </summary>
     public abstract class BaseController : ControllerBase
     {
         protected long ObterIdUsuarioLogado()

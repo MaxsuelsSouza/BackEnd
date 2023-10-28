@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AgendaTelefonica.Api.Data.Mappings
 {
+    /// <summary>
+    /// estabelece o que e necessario ter um usuario
+    /// </summary>
     public class UsuarioMap : IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)

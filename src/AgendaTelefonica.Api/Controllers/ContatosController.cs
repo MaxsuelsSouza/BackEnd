@@ -19,6 +19,11 @@ namespace AgendaTelefonica.Api.Controllers
             _contatosService = contatosService;
         }
 
+        /// <summary>
+        /// cria um novo usuario dentro do idUsuario logado
+        /// </summary>
+        /// <param name="contrato"></param>
+        /// <returns></returns>
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> Adicionar(
@@ -40,6 +45,10 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// vai tentar obter todos os contato vinculado ao idUsuario caso esteja logado
+        /// </summary>
+        /// <returns>vai retorna todos os contatos vinculado ao idUsuario logado</returns>
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Obter()
@@ -59,6 +68,11 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// vai tentar obter o contato pelo id que estar vinculado ao idUsuario logado
+        /// </summary>
+        /// <param name="id">id que sera atualizado</param>
+        /// <returns>vai retorna o contatos que foi cadastrado com aquele id dentro do idUsuario logado</returns>
         [HttpGet]
         [Route("{id}")]
         [Authorize]
@@ -84,6 +98,12 @@ namespace AgendaTelefonica.Api.Controllers
 
         }
 
+        /// <summary>
+        /// vai atualizar o id que estja vinculado ao idUsuario logado
+        /// </summary>
+        /// <param name="id">id que vai ser atualizado</param>
+        /// <param name="contrato">os dados que irao ser atualizado</param>
+        /// <returns>retornar um contato atualizado caso esteja logado</returns>
         [HttpPut]
         [Route("{id}")]
         [Authorize]
@@ -110,6 +130,16 @@ namespace AgendaTelefonica.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// vai deletar o id cadastrado dentro do idUsuario logado
+        /// </summary>
+        /// <param name="id">id do contato a ser deletado</param>
+        /// <returns>vai retorna que foi bem sucedido mas nao ha nada para amostrar </returns><summary>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>vai retorna que foi bem sucedido mas nao ha nada para amostrar</returns> <summary>
         [HttpDelete]
         [Route("{id}")]
         [Authorize]

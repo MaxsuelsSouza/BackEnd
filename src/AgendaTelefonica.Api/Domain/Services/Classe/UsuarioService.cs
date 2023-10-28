@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Authentication;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using AgendaTelefonica.Api.Contratos.Usuario;
 using AgendaTelefonica.Api.Damain.Models;
 using AgendaTelefonica.Api.Damain.Repository.Interfaces;
@@ -78,7 +74,11 @@ namespace AgendaTelefonica.Api.Damain.Services.Classe
             usuario.Id = id;
             usuario.Senha = GeraHashSenha(entidade.Senha);
 
+            Usuario validacaoDeCampo = new Usuario(
+                entidade.Email
+            );
 
+            ValidacaoUser.Validation(validacaoDeCampo);
 
             usuario = await _usuarioRepository.Atualizar(usuario);
 

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace AgendaTelefonica.Api.Contratos.Usuario
 {
+    /// <summary>
+    /// O que ele devolve ao usuario depois dele fazer login
+    /// </summary>
     public class UsuarioLoginResponseContrato
     {
         public long Id { get; set; }

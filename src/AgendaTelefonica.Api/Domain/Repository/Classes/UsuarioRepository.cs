@@ -20,7 +20,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
 
             return entidade;
         }
-
         public async Task<Usuario> Atualizar(Usuario entidade)
         {
             Usuario entidadeBanco = _contexto.Usuario
@@ -33,13 +32,11 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
             await _contexto.SaveChangesAsync();
             return entidadeBanco;
         }
-
         public async Task Deletar(Usuario entidade)
         {
             _contexto.Entry(entidade).State = EntityState.Deleted;
             await _contexto.SaveChangesAsync();
         }
-
         public async Task<IEnumerable<Usuario>> Obter()
         {
             return await _contexto
@@ -47,7 +44,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
             .OrderBy(u => u.Id)
             .ToListAsync();
         }
-
         public async Task<Usuario?> ObterPorId(long id)
         {
             return await _contexto
@@ -55,7 +51,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
             .Where(u => u.Id == id)
             .FirstOrDefaultAsync();
         }
-
         public async Task<Usuario?> ObterPorEmail(string email)
         {
             return await _contexto

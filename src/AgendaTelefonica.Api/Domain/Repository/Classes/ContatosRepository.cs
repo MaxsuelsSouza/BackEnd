@@ -7,7 +7,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
 {
     public class ContatosRepository : IContatosRepository
     {
-
         private readonly AplicationContext _contexto;
         public ContatosRepository(AplicationContext context)
         {
@@ -21,7 +20,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
 
             return entidade;
         }
-
         public async Task<Contatos> Atualizar(Contatos entidade)
         {
             Contatos entidadeBanco = _contexto.Contatos
@@ -34,13 +32,11 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
             await _contexto.SaveChangesAsync();
             return entidadeBanco;
         }
-
         public async Task Deletar(Contatos entidade)
         {
             _contexto.Entry(entidade).State = EntityState.Deleted;
             await _contexto.SaveChangesAsync();
         }
-
         public async Task<IEnumerable<Contatos>> Obter()
         {
             return await _contexto
@@ -48,7 +44,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
             .OrderBy(u => u.Id)
             .ToListAsync();
         }
-
         public async Task<Contatos?> ObterPorId(long id)
         {
             return await _contexto
@@ -56,7 +51,6 @@ namespace AgendaTelefonica.Api.Damain.Repository.Classes
             .Where(u => u.Id == id)
             .FirstOrDefaultAsync();
         }
-
         public async Task<IEnumerable<Contatos>> ObterPorIdUsuario(long idUsuario)
         {
             return await _contexto

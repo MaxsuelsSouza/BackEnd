@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AgendaTelefonica.Api.Data.Mappings
 {
+    /// <summary>
+    /// configura como entidade ira se comporta no banco de dados
+    /// </summary>
     public class ContatosMap : IEntityTypeConfiguration<Contatos>
     {
         public void Configure(EntityTypeBuilder<Contatos> builder)
