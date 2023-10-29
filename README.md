@@ -75,7 +75,7 @@ As seguintes ferramentas/tecnologias foram usadas na construção e teste do pro
 | :----------------- | :------------------------- | :----------: |
 | <img align="center" alt="vue" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/CS.svg">| c#  |  ``       |
 | <img align="center" alt="vue" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/DotNet.svg">| .net  |  `7`       |
-| <img align="center" alt="js" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/PostgreSQL-Light.svg"> | Mysql |  `8.0.29`      |
+| <img align="center" alt="js" height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/PostgreSQL-Light.svg"> | PostgreSQL |  `8.0.29`      |
     
 
 
