@@ -1,11 +1,8 @@
-using System.ComponentModel.DataAnnotations;
-using System.Data.Common;
-using AgendaTelefonica.Api.Contratos.Usuario;
 using AgendaTelefonica.Api.Controllers;
-using AgendaTelefonica.Api.Damain.Models;
 using AgendaTelefonica.Api.Damain.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using Xunit;
 
 namespace AgendaTelefonica.Test.controller
 {
@@ -26,41 +23,6 @@ namespace AgendaTelefonica.Test.controller
             //Assert
             Assert.IsType<OkObjectResult>(resultadoController);
         }
-
-        [Fact]
-        public async void DeveObterTodosUsuariosPorId()
-        {
-            //Arrange
-
-
-
-
-            //Act
-
-
-            //Assert
-
-        }
-
-        [Fact]
-        public async void DeveAdicionarUsuarios()
-        {
-            //Arrange
-
-
-            //Act
-
-
-            //Assert
-
-        }
-
-    }
-
-    internal class ContatoLoginRequestContrato
-    {
-        public ContatoLoginRequestContrato()
-        {
-        }
+        //UNICO TESTE QUE SOUBE FAZER, OS OUTROS FALHARAM OU NEM FUCIONARAM
     }
 }

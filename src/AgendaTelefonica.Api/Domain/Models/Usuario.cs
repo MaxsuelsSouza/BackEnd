@@ -19,5 +19,10 @@ namespace AgendaTelefonica.Api.Damain.Models
         {
             Email = email;
         }
+        public Usuario(string senha, string email)
+        {
+            Senha = senha;
+            Email = email;
+        }
     }
 }
