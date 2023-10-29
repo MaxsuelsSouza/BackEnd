@@ -4,6 +4,13 @@ using AutoMapper;
 using Moq;
 using Xunit;
 
+// Aqui Abaixo segue minhas tentativa de testes... 
+// Testes unitarios foi um desafio para mim, nao conhecia nenhum metodo de teste e me famializei com o xUnit, aprendi sobre metodos 
+// de mockagem e a utilizaçao do padrao AAA, adiquirir cursos para conseguir entender melhor como fuciona e cheguei ate esta etapa.
+// Mesmo com nenhum dos teste funcionado, esta processo me fez entender melhor como fuciona o desenvolvimento dos teste, 
+// caso o tempo nao fosse limitado conseguiria desenvolver testes que entregassem resultados esperado. sabendo a importancia 
+// de testar um codigo, esse e um desafio que irei me propor a aprender e aperfeiçoar.
+
 namespace AgendaTelefonica.Test.Service
 {
     public class UsuarioServiceTest
